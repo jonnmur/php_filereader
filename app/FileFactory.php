@@ -13,7 +13,7 @@ class FileFactory
      * @param string $filePath
      * @return App\File
      */
-    public static function getFile(string $filePath): File
+    public static function getFile(?string $filePath): File
     {
         if (empty($filePath) || !file_exists($filePath)) {
             throw new Exception('Invalid filepath!');
