@@ -9,7 +9,7 @@ use App\Util\ConsolePrinter;
 $input = getopt('f:');
 
 try {
-    $file = FileFactory::getFile(trim($input['f']) ?? null);
+    $file = FileFactory::getFile($input['f'] ?? null);
 }
 catch (Exception $e) {
     ConsolePrinter::printError($e->getMessage());
